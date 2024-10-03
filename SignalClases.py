@@ -25,14 +25,14 @@ class OrgSignal:
         # print(orgFiles)
         path = orgSignalDict[orgFold [0]]
         # print(path)
+        
+        orgPath = 'S:'+ '\\'+ '\\' + 'Proyecto Epilepsia' + '\\'+ '\\'+ path + '\\'+ '\\' + foldOS[Foldnum] + '\\'+ '\\' + orgFiles[Filenum] + '.mat'
+        print(orgPath)
 
-        orgPaht = 'D:'+ '\\'+ '\\' + path + '\\'+ '\\' + foldOS[Foldnum] + '\\'+ '\\' + orgFiles[Filenum] + '.mat'
-        print(orgPaht)
-
-        orgSig = scipy.io.loadmat(orgPaht) 
+        orgSig = scipy.io.loadmat(orgPath) 
         orgSigData = orgSig['data']
         orgSigData = orgSigData.transpose()       
-        return orgSigData,orgPaht, orgFiles[Filenum]
+        return orgSigData,orgPath, orgFiles[Filenum]
     
 
 class FiltSignal:
@@ -62,7 +62,7 @@ class FiltSignal:
         pathFilt = filterSignalDict[filtFold[0]]
         # print(pathFilt)
 
-        filtPaht = 'D:'+ '\\'+ '\\' + pathFilt + '\\'+ '\\' + foldFilt[Foldnum] + '\\'+ '\\' + filtFiles[Filenum] + '\\'+ '\\' + filtFiles[Filenum] +'.mat'
+        filtPaht = 'S:'+ '\\'+ '\\' + 'Proyecto Epilepsia' + '\\'+ '\\'+ pathFilt + '\\'+ '\\' + foldFilt[Foldnum] + '\\'+ '\\' + filtFiles[Filenum] + '\\'+ '\\' + filtFiles[Filenum] +'.mat'
         print(filtPaht)
 
         filtSig = scipy.io.loadmat(filtPaht) 
@@ -95,7 +95,7 @@ class SWSignal:
         pathSW = slowWaveDict[SWFold[0]]
         # print(pathSW)
 
-        SWPaht = 'D:'+ '\\'+ '\\' + pathSW + '\\'+ '\\' + foldSW[Foldnum] + '\\'+ '\\' + SWFiles[Filenum] + '\\'+ '\\' + SWFiles[Filenum] +'.mat'
+        SWPaht = 'S:'+ '\\'+ '\\' + 'Proyecto Epilepsia' + '\\'+ '\\' + pathSW + '\\'+ '\\' + foldSW[Foldnum] + '\\'+ '\\' + SWFiles[Filenum] + '\\'+ '\\' + SWFiles[Filenum] +'.mat'
         print(SWPaht)
 
         SWSig = scipy.io.loadmat(SWPaht) 
@@ -130,7 +130,7 @@ class IndSW:
         label = indSWDict[IndFold[6]]
         # print(label)
 
-        IndPaht = 'D:'+ '\\'+ '\\' + pathInd + '\\'+ '\\' + IndFilt[Foldnum] + '\\'+ '\\' + IndFiles[Filenum] + '\\'+ '\\' + label[lb]+'\\'+ '\\' + IndFiles[Filenum] +'_'+ label[lb]+'.mat'
+        IndPaht = 'S:'+ '\\'+ '\\' + 'Proyecto Epilepsia' + '\\'+ '\\'+ pathInd + '\\'+ '\\' + IndFilt[Foldnum] + '\\'+ '\\' + IndFiles[Filenum] + '\\'+ '\\' + label[lb]+'\\'+ '\\' + IndFiles[Filenum] +'_'+ label[lb]+'.mat'
         print(IndPaht)
 
         IndSig = scipy.io.loadmat(IndPaht) 
@@ -162,7 +162,7 @@ class saveData:
         label = indDF[IndFold[6]]
         # print(label)
 
-        savePath = 'D:'+ '\\'+ '\\' + pathInd + '\\'+ '\\' + IndFilt[Foldnum] + '\\'+ '\\' + IndFiles[Filenum] +'\\'+ '\\'+ label[lb] +'\\' + IndFiles[Filenum] + '_' + label[lb]  +'.csv'
+        savePath = 'S:'+ '\\'+ '\\' + 'Proyecto Epilepsia' + '\\'+ '\\'+ pathInd + '\\'+ '\\' + IndFilt[Foldnum] + '\\'+ '\\' + IndFiles[Filenum] +'\\'+ '\\'+ label[lb] +'\\' + IndFiles[Filenum] + '_' + label[lb]  +'.csv'
         print(savePath)
         
         return savePath
@@ -190,7 +190,7 @@ class saveDataSR:
         label = indDF[IndFold[6]]
         # print(label)
 
-        savePath = 'D:'+ '\\'+ '\\' + pathInd + '\\'+ '\\' + IndFilt[Foldnum] + '\\'+ '\\' + IndFiles[Filenum] +'\\'+ '\\'+ label[lb] +'\\' + IndFiles[Filenum] + '_' + label[lb] + '_SR' + '.csv'
+        savePath = 'S:'+ '\\'+ '\\' + 'Proyecto Epilepsia' + '\\'+ '\\'+ pathInd + '\\'+ '\\' + IndFilt[Foldnum] + '\\'+ '\\' + IndFiles[Filenum] +'\\'+ '\\'+ label[lb] +'\\' + IndFiles[Filenum] + '_' + label[lb] + '_SR' + '.csv'
         print(savePath)
         
         return savePath
@@ -219,7 +219,7 @@ class saveWV:
         label = indDF[IndFold[6]]
         # print(label)
 
-        readPath = 'D:'+ '\\'+ '\\' + pathInd + '\\'+ '\\' + IndFilt[Foldnum] + '\\'+ '\\' + IndFiles[Filenum] +'\\'+ '\\'+ label[lb] +'\\' + IndFiles[Filenum] + '_' + label[lb] +'-'+ inPnt+'-'+fnPnt+'.png'
+        readPath = 'S:'+ '\\'+ '\\' + 'Proyecto Epilepsia' + '\\'+ '\\'+ pathInd + '\\'+ '\\' + IndFilt[Foldnum] + '\\'+ '\\' + IndFiles[Filenum] +'\\'+ '\\'+ label[lb] +'\\' + IndFiles[Filenum] + '_' + label[lb] +'-'+ inPnt+'-'+fnPnt+'.png'
         print(readPath)
         
         return readPath
